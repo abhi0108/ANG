@@ -28,22 +28,21 @@
 
     <nav id="navbar">
         <img id="img1" src="logo.jpg" style="height: 80px">
-        <img id="img2" src="logo1.png" style="height: 80px;display: none;">
         <!-- <h5 style="text-shadow: 1px 1px #d3d3d3;margin-left:40px;margin-top: -28px;">ANG</h5> -->
         <a class="link" href="#contacts">CONTACTS</a>
         <a class="link" href="#service">SERVICES</a>
         <a class="link" href="#modules">MODULES</a>
         <a class="link" href="#about">ABOUT US</a>
         <a class="link" href="#">HOME</a>
-        <i class="fa fa-bars" aria-hidden="true"
+        <i class="fa fa-bars men" aria-hidden="true"
             style="display: none;transition: all 0.2s ease-in-out;margin-right: 10px;font-size: 30px; "></i>
     </nav>
     <div class="menu text-center"
-        style="height:300px;background:white; box-shadow: 0px 4px 3px #d3d3d3; margin-top: 90px; width:100%;display:none;z-index: 1;position:fixed;">
+        style="height:300px;background:white;margin-top: 90px; width:100%;display:none;z-index: 1;position:fixed;">
         <br><a class="link" href="#">HOME</a><br><br>
         <a class="link" href="#">ABOUT US</a><br><br>
         <a class="link" href="#contacts">CONTACTS</a><br><br>
-        <a class="link" href="#">SERVICES</a><br><br>
+        <a class="link" href="#service">SERVICES</a><br><br>
         <a class="link" href="#modules">MODULES</a>
     </div>
     <div class="container1" id="about">
@@ -131,7 +130,7 @@
                 <div id="testimonial-slider" class="owl-carousel">
                     <div class="testimonial" style=" box-shadow: 0px 10px 6px #555877;">
                         <div class="pic">
-                            <img src="profile2.jpg">
+                            <img src="d1 (1).jpg" style="height: 80px;">
                         </div>
                         <p class="description">
                             Quaff Media has a bunch of enthusiastic employees who know their way around social media.
@@ -143,7 +142,7 @@
                     </div>
                     <div class="testimonial" style=" box-shadow: 0px 10px 6px #555877;">
                         <div class="pic">
-                            <img src="profile3.jpg">
+                            <img src="d1 (2).jpg">
                         </div>
                         <p class="description">
                             From making our social media handles lively to creating our brand image, Quaff helped us
@@ -155,7 +154,7 @@
                     </div>
                     <div class="testimonial" style=" box-shadow: 0px 10px 6px #555877;">
                         <div class="pic">
-                            <img src="profile1.jpg">
+                            <img src="d1 (3).jpg" style="height: 80px;width: 100px;">
                         </div>
                         <p class="description">
                             Never knew what content distribution is, when I onboarded Quaff Media to make me go viral in
@@ -171,7 +170,49 @@
         </div>
     </div>
 
-    <div class="container-fluid expert-container" >
+    <div class="container-fluid mt-5" id="service" >
+        <h2 class="expert-title">Services</h2><br><br>
+        <div class="row">
+            <div class="col-12 col-md-5">
+                <div class="service-1">
+                    <img src="svc.png" alt="" style="height: 80px;margin-top: -80px; display: block;margin-left: auto; margin-right: auto;">
+                    <br><h2 class="expert-heading">The Problem</h2>
+                    <p class=" expert-para">The main problem is the employability gap and lack of skill
+                        set.unemployment is the state of being unemployed, but ‘unemployability’ is
+                        when an individual isn’t acceptable for employment by a job provider.
+                        That’s the problem that India is suffering from.
+                        </p>
+
+                </div>
+
+            </div><br> 
+            <div class="col-12 col-md-2" style="">
+                <i class="fas fa-arrow-right up" id="right"></i>
+                <i style="display: none;" class="fas fa-arrow-down down"></i>
+
+            </div>
+            <div class="col-12 col-md-5 rtw">
+                <div class="service-1">
+                    <img src="svc(2).png" alt="" style="height: 80px;margin-top: -80px; display: block;margin-left: auto; margin-right: auto;">
+                    <h2 class="expert-heading">The Solution</h2>
+                    <div class="list-center">
+                    <ul class="">
+                        <li>Acquire Employability Skillset</li>
+                        <li>Skill Enhancement Program</li>
+                        <li>Workshops And Seminars</li>
+                        <li>Mentor Sessions</li>
+                        <li>Institutional training</li>
+                    </ul></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div><br>
+
+    <div class="container-fluid expert-container" id="modules">
 
         <h2 class="expert-title" >Training Module</h2>
 
@@ -456,7 +497,7 @@
             <footer class="mt-5" style="background-color: black;color:white;text-align: center;" id="contacts">
 
 
-                <div class="container"><br>
+                <div class="container">
                     <div class="row">
                         <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                         <div class="elfsight-app-504f3bf2-69e2-4430-b5c6-d82d22611d86"></div>
@@ -527,7 +568,7 @@
                     }
                 }
                 $(document).ready(function () {
-                    $("i").click(function () {
+                    $(".men").click(function () {
                         $(".menu").toggle();
                     });
                 });
@@ -569,27 +610,19 @@
 
                     lastScrollTop = st;
                 }
+
                 window.onscroll = () => {
 
-const nav = document.querySelector('#navbar');
-if (this.scrollY <= 10) nav.className = ''; else nav.className = 'scroll';
+                    const nav = document.querySelector('#navbar');
+                    if (this.scrollY <= 10) nav.className = ''; else nav.className = 'scroll';
 
-if (document.body.scrollTop >= 10 || document.documentElement.scrollTop > 50) {
-    document.getElementById("img1").style.height = "80px";
-}
-else {
-    document.getElementById("img1").style.height = "80px";
-}
-
-if ( document.documentElement.scrollTop > 10) {
-    document.getElementById("img1").style.display="none";
-    document.getElementById("img2").style.display="inline-block";
-}
-else {
-    document.getElementById("img1").style.display = "inline-block";
-    document.getElementById("img2").style.display="none";
-}
-};
+                    if (document.body.scrollTop >= 10 || document.documentElement.scrollTop > 50) {
+                        document.getElementById("img1").style.height = "80px";
+                    }
+                    else {
+                        document.getElementById("img1").style.height = "80px";
+                    }
+                };
 
             </script>
 
